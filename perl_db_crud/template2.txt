@@ -1,0 +1,13 @@
+Hi $first_name$!  Haven't heard from you for a while.  Hope all has been well. Do you still want to order your $number_of_items$ units, on sale through the end of July for only $price_per_item$ ($total$ total).
+
+Hope to here from you soon,
+
+Suzie Smith
+
+
+PS I hope contacting you at $email$ won't get you in trouble!
+
+
+
+
+

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<site>  <!--xmlns = "x-schema:siteSchema.xml"-->
+	<page tab="home">
+  	    <header search="T"/>
+	    <box type="navigation" id="navBox" anonymous="T" side="left"/>
+	    <box type="custom" id="contactBox" anonymous="T" member="T" reviewer="T" side="right"> We're located at ...</box>
+	    <content type="custom" path="site/index_html"/>
+	</page>
+    
+	<page tab="about">
+	    <header search="T"/>
+	    <box type="reuse" ref="navBox"/>
+	    <box type="reuse" ref="contactBox"/>
+	    <content type="custom" path="site/about/index_html"/>
+	</page>
+
+	<folder zid="site">
+	    <document zid="index_html" title="Welcome to ColonAerobics.com" description="Site home page">Aerobics for the colon!  etc.</document>
+	    <folder zid="about">
+	        <document zid="index_html" title="About Body Strategies" description="Information about Body Strategies">Steve and Sue started etc.</document>
+	    </folder>
+	</folder>
+</site>

@@ -1,0 +1,35 @@
+/* HTML styles */
+
+html, body { margin: 0; border: 0; }
+
+body { 
+    font-family: "courier new", monospace ;
+    color: black ; 
+    background-color: white ; 
+}
+
+h1, h2 { 
+    font-family: verdana, helvetica, sans ;
+}
+
+h1 { 
+    font-size: 1.3em ; 
+    margin-bottom: 0.5em ; 
+    margin-left: 0.2em ; 
+    margin-top: 0.2em ; 
+}
+
+h2 { 
+    font-size: 1.1em ;
+    margin-bottom: 0.3em ; 
+}
+
+.section { 
+    color: inherit ; 
+    background-color: beige ; 
+    border: 1px solid tan ; 
+    margin: 1em ; 
+    padding-bottom: 1em ; 
+    padding-left: 0.5em ; 
+}
+

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<site> <!--xmlns = "x-schema:siteSchema.xml"-->
+	<page tab="home">
+		<box type="navigation" id="navBox" anonymous="F" member="T" reviewer="T"/>
+		<box type="about" id="aboutBox" anonymous="F" member="T" reviewer="T"/>
+		<content type="custom" path="site/index_html"/>
+		<footer>Created by Matt Young</footer>
+	</page>
+	
+	<page tab="feedback">
+	       <box type="reuse" ref="navBox"/>
+	       <box type="reuse" ref="aboutBox"/>
+	       <content type="custom" path="site/feedback/index_html"/>
+	       <footer>Created by Matt Young</footer>
+	</page>
+	
+	<folder zid="site">
+	      <document zid="index_html" title="CoolWebSite.com" description="Purveyors of cool things">CoolWebSite.com has lots of ...</document>
+	      <newsItem zid="news1" leadIn="More rain to come" title="Weekend Weather">Expect more rain...</newsItem>
+	      <folder zid="feedback">
+	             <document zid="index_html" title="Feedback">What do you think of our cool site?</document>
+	      </folder>
+	</folder>
+</site>

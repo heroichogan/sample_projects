@@ -1,0 +1,10 @@
+Dear $salutation$ $last_name$:
+
+This message is to confirm your order for $number_of_items$ units at a cost of $price_per_item$ each for a total price of $total$.  They will be shipped discretely in an unmarked container.
+
+Thank you,
+
+Sue Smith
+
+
+

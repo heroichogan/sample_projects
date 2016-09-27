@@ -1,0 +1,137 @@
+<?xml version = "1.0"?>
+
+<Schema xmlns = "urn:schemas-microsoft-com:xml-data" xmlns:dt="urn:schemas-microsoft-com:datatypes">
+
+
+<ElementType name="site" model="closed" content="eltOnly" order="seq">
+   <element type="page" maxOccurs="*" />
+   <element type="workflow" minOccurs="0" maxOccurs="1"/>
+   <element type="folder" minOccurs="0" maxOccurs="*" />
+</ElementType>
+
+
+<ElementType name="page" content="eltOnly" order="seq">
+   <AttributeType name="tab" dt:type="string" required="yes" />
+   <attribute type="tab"/>
+
+   <element type="header" minOccurs="0" maxOccurs="1"/>
+   <element type="box" minOccurs="0" maxOccurs="*" />
+   <element type="content" maxOccurs="1"/>
+   <element type="footer" minOccurs="0" maxOccurs="1"/>
+</ElementType>
+
+
+<ElementType name="header" content="textOnly">
+    <AttributeType name="search" dt:type="enumeration" dt:values="T F" default="F"/>
+    <attribute type="search"/>
+</ElementType>
+
+
+<ElementType name="box" content="textOnly">   
+    <AttributeType name="type" dt:type="enumeration" dt:values="custom reuse navigation about related login review calendar" required="yes"/>
+    <attribute type="type"/>
+    <AttributeType name="id"            dt:type="id" required="no"/>
+    <attribute type="id" />
+    <AttributeType name="ref"           dt:type="idref" required="no"/>
+    <attribute type="ref" />
+    <AttributeType name="side"          dt:type="enumeration" dt:values="left right" default="left"/>
+    <attribute type="side" />
+    <AttributeType name="member"        dt:type="enumeration" dt:values="T F" required="no"/>
+    <attribute type="member" />
+    <AttributeType name="reviewer"      dt:type="enumeration" dt:values="T F" required="no"/>
+    <attribute type="reviewer" />
+    <AttributeType name="owner"         dt:type="enumeration" dt:values="T F" required="no"/>
+    <attribute type="owner" />
+    <AttributeType name="manager"       dt:type="enumeration" dt:values="T F" required="no"/>
+    <attribute type="manager" />
+    <AttributeType name="authenticated" dt:type="enumeration" dt:values="T F" required="no"/>
+    <attribute type="authenticated" />
+    <AttributeType name="anonymous"     dt:type="enumeration" dt:values="T F" required="no"/>
+    <attribute type="anonymous" />
+</ElementType>
+
+
+<ElementType name="content" content="empty">
+    <AttributeType name="type" dt:type="enumeration" dt:values="custom search news members" required="yes"/>
+    <attribute type="type" required="yes"/>
+    <AttributeType name="path" dt:type="string" required="no"/>
+    <attribute type="path" required="no"/>
+</ElementType>
+
+<ElementType name="footer" content="textOnly"/>
+
+
+<!-- *** -->
+
+
+<ElementType name="workflow" content="eltOnly">
+    <element type="user" minOccurs="0" maxOccurs="*"/>
+    <AttributeType name="type" dt:type="enumeration" dt:values="default TYPE2 TYPE3" default="default"/>
+    <attribute type="type"/>
+</ElementType>
+
+
+<ElementType name="user" content="empty">
+    <AttributeType name="login" dt:type="string" required="yes"/>
+    <attribute type="login"/>
+    
+    <AttributeType name="password" dt:type="string" required="yes"/>
+    <attribute type="password" />
+    
+    <AttributeType name="role" dt:type="enumeration" dt:values="member reviewer owner manager authenticated anonymous" required="yes"/>
+    <attribute type="role"/>
+</ElementType>
+
+
+
+<!-- *** -->
+
+<ElementType name="folder" content="eltOnly" order="many">
+    <AttributeType name="zid" dt:type="string" required="yes"/>       <!-- More specific type for zid? -->
+    <attribute type="zid"/>
+    
+    <group order="one">
+        <element type="folder" minOccurs="0"/>
+        <element type="document" minOccurs="0"/>
+        <element type="event" minOccurs="0"/>
+        <element type="newsItem" minOccurs="0"/>
+    </group>
+</ElementType>
+
+<ElementType name="document" content="textOnly"> 
+    <AttributeType name="zid" dt:type="string" required="yes"/>    <!-- More specific type for zid? -->
+    <attribute type="zid"/>
+    <AttributeType name="title" dt:type="string" required="no"/>
+    <attribute type="title"/>
+    <AttributeType name="description" dt:type="string" required="no"/>
+    <attribute type="description"/>
+</ElementType>
+
+
+<ElementType name="event" content="textOnly">
+    <AttributeType name="zid" dt:type="string" required="yes"/>
+    <attribute type="zid"/>
+    <AttributeType name="title" dt:type="string" required="no"/>
+    <attribute type="title"/>
+    <AttributeType name="description" dt:type="string" required="no"/>
+    <attribute type="description"/>
+    <AttributeType name="start" dt:type="string" required="no"/>     <!-- PICK A DATE FORMAT -->
+    <attribute type="start"/>
+    <AttributeType name="end" dt:type="string" required="no"/>       <!-- PICK A DATE FORMAT -->
+    <attribute type="end"/>
+</ElementType>
+
+
+
+<ElementType name="newsItem" content="textOnly">
+    <AttributeType name="id" dt:type="string" required="yes"/>
+    <attribute type="id"/>
+    <AttributeType name="title" dt:type="string" required="no"/>
+    <attribute type="title"/>
+    <AttributeType name="leadIn" dt:type="string" required="no"/>
+    <attribute type="leadIn"/>
+</ElementType>
+
+
+</Schema>
+ 

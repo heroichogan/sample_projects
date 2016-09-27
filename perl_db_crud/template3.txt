@@ -1,0 +1,12 @@
+$salutation$. $first_name$ $middle_initial$. $last_name$, do you want to be a winner?  
+
+Confirm your order for $number_of_items$ units ($price_per_item$ each) by sending an email from $email$.  It's only $total$ altogether!
+
+Thank you,
+
+Sue Smith
+
+
+
+
+

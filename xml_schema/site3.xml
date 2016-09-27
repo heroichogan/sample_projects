@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<site> <!--xmlns = "x-schema:siteSchema.xml"-->
+	<page tab="home">
+		<content type="custom" path="site/index_html"/>
+	</page>
+	
+	<page tab="search">
+		<content type="search"/>
+	</page>
+	
+	<workflow type="default">
+	        <user login="matt" password="matt" role="manager"/>
+	        <user login="amember" password="amember" role="member"/>
+	</workflow>
+	
+	<folder zid="site">
+		<document zid="index_html" title="Welcome to Matt's Home Page">This page has all kinds of...</document>
+		<event zid="event1" start="2/14/2004" end="2/15/2004" description="Valentine''s Day Activities">Activities for ...</event>
+	</folder>
+</site>
