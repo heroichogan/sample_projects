@@ -1,1 +1,1 @@
-The files in this directory (projectFiles\perlAndDB\) implement a simple mail merge system.
+The files in this directory implement a simple mail merge system.
