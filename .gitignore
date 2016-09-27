@@ -1,3 +1,11 @@
+# =========================
+# Added by heroichogan
+# =========================
+# HQX Files (Mac data format)
+*.hqx
+
+# -------------------------
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
