@@ -1,0 +1,6 @@
+﻿<flash_project name="flipGame" version="1">
+    <project_file path="./flipGame.fla" filetype="fla" profile="" />
+    <project_file path="./Board.as" filetype="as" />
+    <project_file path="./Card.as" filetype="as" />
+    <project_file path="./Sign.as" filetype="as" />
+</flash_project>
