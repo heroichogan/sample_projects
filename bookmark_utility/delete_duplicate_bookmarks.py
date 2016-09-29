@@ -34,7 +34,7 @@ while m:
     if name.startswith( '==>' ):
         name = name[3:]
     
-    # Write part before name, then write name; also build summary datta
+    # Write part before name, then write name; also build summary data
     f.write( data[pos:m.start(1)] ) 
     if url in duplicates:
         # Indicate duplicate found
